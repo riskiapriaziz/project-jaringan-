@@ -82,11 +82,14 @@ Metode Pengujian:
 # Batasan Masalah
 
 Batasan Masalah:
+
 •	Cakupan Wilayah: Terbatas pada dua gedung perkuliahan UBBG (Gedung A sebagai pusat server, Gedung B sebagai client).
+
 •	Lingkup Simulasi: Seluruh perancangan, topologi, dan pengujian dilakukan secara virtual menggunakan Cisco Packet Tracer.
 
 # Rencana Pengembangan Selanjutnya
 
 •	Implementasi Redundancy: Menambahkan Redundant Link (Spanning Tree Protocol - STP) dan Router Redundancy (HSRP/VRRP) untuk mencegah Single Point of Failure.
+
 •	Pengembangan Keamanan Lanjutan: Menerapkan Access Control List (ACL), Port Security pada switch, dan Firewall dedicated untuk perlindungan server.
 
