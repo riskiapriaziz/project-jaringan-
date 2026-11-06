@@ -45,24 +45,34 @@ VLAN 30	SERVER UBBG	192.168.30.0/24
 
 # Cara Menjalankan & Langkah Konfigurasi
 
-Langkah 1: Penyiapan Perangkat — Buka Cisco Packet Tracer, letakkan 1 Router, 2 Switch, 1 Server, dan PC Client di masing-masing gedung.
-Langkah 2: Pengkabelan (Koneksi) — Hubungkan Client & Server ke Switch gedungnya masing-masing. Hubungkan Switch-A dan Switch-B ke Router melalui port GigabitEthernet/Trunk.
-Langkah 3: Konfigurasi IP Server — Set IP Server UBBG: 192.168.30.10 | Subnet: 255.255.255.0 | Gateway: 192.168.30.1. Aktifkan layanan HTTP pada tab Services.
-Langkah 4: Konfigurasi IP Client — PC Gedung A: IP 192.168.10.10 | Gateway 192.168.10.1.
+*Langkah 1: Penyiapan Perangkat — Buka Cisco Packet Tracer, letakkan 1 Router, 2 Switch, 1 Server, dan PC Client di masing-masing gedung.
+
+*Langkah 2: Pengkabelan (Koneksi) — Hubungkan Client & Server ke Switch gedungnya masing-masing. Hubungkan Switch-A dan Switch-B ke Router melalui port GigabitEthernet/Trunk.
+
+*Langkah 3: Konfigurasi IP Server — Set IP Server UBBG: 192.168.30.10 | Subnet: 255.255.255.0 | Gateway: 192.168.30.1. Aktifkan layanan HTTP pada tab Services.
+
+*Langkah 4: Konfigurasi IP Client — PC Gedung A: IP 192.168.10.10 | Gateway 192.168.10.1.
 PC Gedung B: IP 192.168.20.10 | Gateway 192.168.20.1.
-Langkah 5: Konfigurasi Switch & VLAN — Switch Gedung A: Buat VLAN 10 & 30, set port Server ke VLAN 30, port ke Router ke mode Trunk.
+
+*Langkah 5: Konfigurasi Switch & VLAN — Switch Gedung A: Buat VLAN 10 & 30, set port Server ke VLAN 30, port ke Router ke mode Trunk.
 Switch Gedung B: Buat VLAN 20, set port Client ke VLAN 20, port ke Router ke mode Trunk.
-Langkah 6: Konfigurasi Inter-VLAN Router — Aktifkan sub-interface pada Router (misal: Gi0/0.10, Gi0/0.20, Gi0/0.30) dengan 802.1Q encapsulation untuk masing-masing VLAN ID dan tetapkan IP Gateway.
+
+*Langkah 6: Konfigurasi Inter-VLAN Router — Aktifkan sub-interface pada Router (misal: Gi0/0.10, Gi0/0.20, Gi0/0.30) dengan 802.1Q encapsulation untuk masing-masing VLAN ID dan tetapkan IP Gateway.
 
 # Rencana Pengujian & Indikator Keberhasilan
 
 Metode Pengujian:
 •	Uji ICMP (Ping Test) Antar VLAN & Gedung: Jalankan perintah ping 192.168.30.10 dari Client Gedung B untuk menguji konektivitas ke Server UBBG.
+
 •	Pengujian Layanan Web (HTTP): Buka Web Browser pada Client Gedung B dan akses URL http://192.168.30.10 untuk memastikan layanan web internal terbuka.
+
 •	Simulasi Pergerakan Paket (Simulation Mode): Gunakan mode Simulation di Packet Tracer untuk mengamati lalu lintas paket Simple PDU yang melewati jalur Trunk dan Sub-interface Router.
-Indikator Keberhasilan:
+
+# Indikator Keberhasilan:
 •	Ping Berhasil (Reply): Tes ping dari Gedung B ke Server UBBG (192.168.30.10) menghasilkan 'Reply from...' (0% packet loss).
+
 •	Layanan Tampil Sempurna: Halaman web server internal UBBG dapat diakses secara private dari browser PC Gedung B.
+
 •	Isolasi Keamanan Terjaga: Lalu lintas data inter-VLAN teratur dan terisolasi dari akses publik.
 
 # Batasan Masalah
