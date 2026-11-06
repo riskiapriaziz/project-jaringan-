@@ -14,22 +14,22 @@ Tantangan utamanya adalah menghubungkan gedung perkuliahan pendukung (Gedung B) 
 
 •	Menerapkan konfigurasi VLAN, Trunking, dan Inter-VLAN Routing pada perangkat jaringan Cisco guna mengoptimalkan keamanan dan efisiensi lalu lintas data.
 
-Topologi Jaringan
+# Topologi Jaringan
 
 Menggunakan arsitektur Hierarchical Star Topology dengan sambungan inter-switch link (virtual Fiber Optic / GigabitEthernet di Cisco Packet Tracer):
 •	Gedung A: Berisi Switch-A (Akses Gedung A), beberapa client (PC/Laptop), dan Server Utama UBBG.
 •	Gedung B: Berisi Switch-B (Akses Gedung B) dan beberapa client (PC/Laptop).
 •	Perangkat Penghubung Pusat: Menggunakan Router UBBG (Router-on-a-Stick) atau Layer 3 Switch sebagai pusat routing antar-VLAN dan antar-gedung.
 
-Perangkat & Spesifikasi Virtual
+# Perangkat & Spesifikasi Virtual
 
-•	1 Unit Router (Router-UBBG): Router Cisco (sebagai pusat routing Inter-VLAN & Gateway).
-•	2 Unit Switch Managed: Switch-A (Gedung A) & Switch-B (Gedung B).
-•	1 Unit Server Pusat: Server-UBBG (menjalankan service HTTP/Web & DNS internal).
-•	PC / Laptop Client: Mewakili pengguna/staf di Gedung A dan mahasiswa di Gedung B.
-•	Kabel Ethernet / Fiber Optic: Media koneksi antar-switch, router, server, dan client.
+*1 Unit Router (Router-UBBG): Router Cisco (sebagai pusat routing Inter-VLAN & Gateway).
+*2 Unit Switch Managed: Switch-A (Gedung A) & Switch-B (Gedung B).
+*1 Unit Server Pusat: Server-UBBG (menjalankan service HTTP/Web & DNS internal).
+*PC / Laptop Client: Mewakili pengguna/staf di Gedung A dan mahasiswa di Gedung B.
+*Kabel Ethernet / Fiber Optic: Media koneksi antar-switch, router, server, dan client.
 
-Rancangan VLAN dan Pengalamatan IP
+# Rancangan VLAN dan Pengalamatan IP
 
 Skema pembagian Virtual LAN (VLAN) dan Subnetting IP Address dikelompokkan sebagai berikut:
 VLAN ID	Nama VLAN	Alokasi Network / Subnet	Keterangan & Peruntukan
@@ -43,7 +43,7 @@ VLAN 30	SERVER UBBG	192.168.30.0/24
 (GW: 192.168.30.1)	Server Utama Data Penting di Gedung A
 (IP Server: 192.168.30.10)
 
-Cara Menjalankan & Langkah Konfigurasi
+# Cara Menjalankan & Langkah Konfigurasi
 
 Langkah 1: Penyiapan Perangkat — Buka Cisco Packet Tracer, letakkan 1 Router, 2 Switch, 1 Server, dan PC Client di masing-masing gedung.
 Langkah 2: Pengkabelan (Koneksi) — Hubungkan Client & Server ke Switch gedungnya masing-masing. Hubungkan Switch-A dan Switch-B ke Router melalui port GigabitEthernet/Trunk.
@@ -54,7 +54,7 @@ Langkah 5: Konfigurasi Switch & VLAN — Switch Gedung A: Buat VLAN 10 & 30, set
 Switch Gedung B: Buat VLAN 20, set port Client ke VLAN 20, port ke Router ke mode Trunk.
 Langkah 6: Konfigurasi Inter-VLAN Router — Aktifkan sub-interface pada Router (misal: Gi0/0.10, Gi0/0.20, Gi0/0.30) dengan 802.1Q encapsulation untuk masing-masing VLAN ID dan tetapkan IP Gateway.
 
-Rencana Pengujian & Indikator Keberhasilan
+# Rencana Pengujian & Indikator Keberhasilan
 
 Metode Pengujian:
 •	Uji ICMP (Ping Test) Antar VLAN & Gedung: Jalankan perintah ping 192.168.30.10 dari Client Gedung B untuk menguji konektivitas ke Server UBBG.
@@ -65,13 +65,13 @@ Indikator Keberhasilan:
 •	Layanan Tampil Sempurna: Halaman web server internal UBBG dapat diakses secara private dari browser PC Gedung B.
 •	Isolasi Keamanan Terjaga: Lalu lintas data inter-VLAN teratur dan terisolasi dari akses publik.
 
-Batasan Masalah
+# Batasan Masalah
 
 Batasan Masalah:
 •	Cakupan Wilayah: Terbatas pada dua gedung perkuliahan UBBG (Gedung A sebagai pusat server, Gedung B sebagai client).
 •	Lingkup Simulasi: Seluruh perancangan, topologi, dan pengujian dilakukan secara virtual menggunakan Cisco Packet Tracer.
 
-Rencana Pengembangan Selanjutnya
+# Rencana Pengembangan Selanjutnya
 
 •	Implementasi Redundancy: Menambahkan Redundant Link (Spanning Tree Protocol - STP) dan Router Redundancy (HSRP/VRRP) untuk mencegah Single Point of Failure.
 •	Pengembangan Keamanan Lanjutan: Menerapkan Access Control List (ACL), Port Security pada switch, dan Firewall dedicated untuk perlindungan server.
