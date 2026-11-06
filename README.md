@@ -32,13 +32,17 @@ Menggunakan arsitektur Hierarchical Star Topology dengan sambungan inter-switch 
 # Rancangan VLAN dan Pengalamatan IP
 
 Skema pembagian Virtual LAN (VLAN) dan Subnetting IP Address dikelompokkan sebagai berikut:
+
 VLAN ID	Nama VLAN	Alokasi Network / Subnet	Keterangan & Peruntukan
+
 VLAN 10	GEDUNG A	192.168.10.0/24
 (GW: 192.168.10.1)	Client / Staf Gedung A
 (Contoh IP: 192.168.10.10)
+
 VLAN 20	GEDUNG B	192.168.20.0/24
 (GW: 192.168.20.1)	Client / Mahasiswa Gedung B
 (Contoh IP: 192.168.20.10)
+
 VLAN 30	SERVER UBBG	192.168.30.0/24
 (GW: 192.168.30.1)	Server Utama Data Penting di Gedung A
 (IP Server: 192.168.30.10)
