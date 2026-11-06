@@ -1,12 +1,12 @@
 # pkdj_2026_rancang_jaringan_ubbg_antar_dua_gedung
 Project rancang bangun jaringan
 
-Latar Belakang
+# Latar Belakang
 
 Universitas Bina Bangsa Getsempena (UBBG) terus meningkatkan kualitas pelayanan akademik dan operasional melalui infrastruktur jaringan lokal (LAN) yang andal, cepat, dan aman. Operasional harian UBBG terbagi dalam beberapa gedung perkuliahan, dengan pusat data (server utama) terletak di Gedung A.
 Tantangan utamanya adalah menghubungkan gedung perkuliahan pendukung (Gedung B) ke server pusat secara private (internal) tanpa terakses oleh jaringan publik guna meminimalisir risiko cyber security. Perancangan dan simulasi dilakukan menggunakan Cisco Packet Tracer untuk menguji validitas arsitektur jaringan sebelum diimplementasikan secara fisik.
 
-Tujuan Perancangan
+# Tujuan Perancangan
 
 •	Mengembangkan arsitektur topologi jaringan terintegrasi antara Gedung A dan Gedung B di UBBG.
 
