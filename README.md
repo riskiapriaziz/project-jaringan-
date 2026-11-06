@@ -23,11 +23,11 @@ Menggunakan arsitektur Hierarchical Star Topology dengan sambungan inter-switch 
 
 # Perangkat & Spesifikasi Virtual
 
-*1 Unit Router (Router-UBBG): Router Cisco (sebagai pusat routing Inter-VLAN & Gateway).
-*2 Unit Switch Managed: Switch-A (Gedung A) & Switch-B (Gedung B).
-*1 Unit Server Pusat: Server-UBBG (menjalankan service HTTP/Web & DNS internal).
-*PC / Laptop Client: Mewakili pengguna/staf di Gedung A dan mahasiswa di Gedung B.
-*Kabel Ethernet / Fiber Optic: Media koneksi antar-switch, router, server, dan client.
+* 1 Unit Router (Router-UBBG): Router Cisco (sebagai pusat routing Inter-VLAN & Gateway).
+* 2 Unit Switch Managed: Switch-A (Gedung A) & Switch-B (Gedung B).
+* 1 Unit Server Pusat: Server-UBBG (menjalankan service HTTP/Web & DNS internal).
+* PC / Laptop Client: Mewakili pengguna/staf di Gedung A dan mahasiswa di Gedung B.
+* Kabel Ethernet / Fiber Optic: Media koneksi antar-switch, router, server, dan client.
 
 # Rancangan VLAN dan Pengalamatan IP
 
